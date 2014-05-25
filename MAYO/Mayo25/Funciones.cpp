@@ -19,3 +19,6 @@ void verificaPar(int n) {
     }
     cout << "par.";
 }
+bool verificaPrimo(int p){
+    return false;
+}
