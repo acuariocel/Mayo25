@@ -6,15 +6,7 @@
 #include "Funciones.cpp"
 using namespace std;
 
-//PROCEDIMIENTO VERIFICAR
 
-void verificaPar(int n) {
-    printf("\n%d es ", n);
-    if (n % 2 == 1) {
-        printf("im");
-    }
-    cout << "par.";
-}
 
 int main() {
     system("title PROGRAMA CON FUNCIONES Y PROCEDIMIENTOS");
