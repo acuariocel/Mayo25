@@ -12,12 +12,12 @@ int main(){
 		for (int i = a; i >= b; i--){
 			printf("%d\t", i);
 		}
-
+		
 	}else{
 		for (int i = a; i <= b; i++){
 			printf("%d\t", i);
 		}
 	}
 	getch();
-    return 0;
+	return 0;
 }
