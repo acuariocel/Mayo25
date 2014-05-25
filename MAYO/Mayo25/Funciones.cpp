@@ -22,3 +22,9 @@ void verificaPar(int n) {
 bool verificaPrimo(int p){
     return false;
 }
+
+//Funcion q retorne entero decimal, reibiento como parametro un entero binario
+int convierteADecimal(int bin){
+    int dec=0;
+    return dec;
+}
