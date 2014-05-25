@@ -3,7 +3,7 @@
 #include <stdio.h>  //para printf
 using namespace std;
 int main(){
-	int a,b,aux;
+	int a,b;
 	printf("Ingrese numero: ");
 	scanf("%d",&a);
 	printf("Ingrese numero: ");
