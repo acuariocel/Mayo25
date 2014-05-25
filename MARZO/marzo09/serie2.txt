@@ -1,0 +1,12 @@
+Proceso serie2
+	Definir n,c Como Entero;
+	Definir linea como Cadena;
+	linea="";
+	Escribir "Ingrese cantidad de numeros";
+	Leer n;
+	Para c=1 hasta n-1 hacer
+		linea=linea+convertiratexto(n+1-c)+", ";
+	FinPara
+	linea=linea+"1";
+	Escribir linea;
+FinProceso

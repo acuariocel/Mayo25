@@ -1,0 +1,12 @@
+Proceso tablas1
+	Definir n,c Como Entero;
+	Escribir "Ingrese número";
+	Leer n;
+	Para c=1 hasta 15 Hacer
+		si c>9 entonces
+			Escribir n," * ",c," = ",c*n;
+		Sino
+			Escribir n," * ",c,"  = ",c*n;
+		finsi		
+	FinPara
+FinProceso

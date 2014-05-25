@@ -1,0 +1,38 @@
+Proceso matriz3
+	Definir a,i,j,fil,col Como Entero;
+	fil=2+azar(4);
+	col=2+azar(4);
+	Dimension a[fil,col];
+	Para i=0 hasta  fil-1 Hacer
+		Para j=0 hasta col-1 Hacer			
+			a[i,j]=100+azar(900);//100+[0,899]
+		FinPara
+	FinPara
+	Escribir "Matriz de ",fil," * ",col;
+	presentarMatriz(a,fil,col);
+	Escribir "Elemento mayor es ",mayorMatriz(a,fil,col);
+FinProceso
+SubProceso presentarMatriz(a,fil,col)
+	Definir x,y Como Entero;
+	Definir l como Texto;
+	l="";
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			l=l+convertirATexto(a[x,y])+"   ";
+		FinPara
+		Escribir l;
+		l="";
+	FinPara
+	Escribir "/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\";
+FinSubProceso
+SubProceso max=mayorMatriz(a,fil,col)
+	Definir x,y,max Como Entero;
+	max=0;
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			si a[x,y]>max entonces
+				max=a[x,y];
+			FinSi
+		FinPara
+	FinPara	
+FinSubProceso

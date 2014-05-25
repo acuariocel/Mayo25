@@ -1,0 +1,42 @@
+Proceso tablas3
+	Definir numTab,conTab,conFil Como Entero;
+	Definir linea,enc Como Caracter;
+	linea='';
+	enc='';
+	Escribir 'Ingrese numero de tablas';
+	Leer numTab;
+	Borrar Pantalla;
+	Para conFil=1 Hasta 15 Hacer
+		Para conTab=1 Hasta numTab Hacer
+			Si conFil=1 Entonces
+				enc=enc+'TABLA DEL '+convertirAtexto(conTab);
+				Si conTab<100 Entonces
+					enc=enc+' ';
+				FinSi
+				Si conTab<10 Entonces
+					enc=enc+' ';
+				FinSi
+				enc=enc+'  ';
+			FinSi
+			linea=linea+convertirAtexto(conTab)+' * '+convertirAtexto(conFil);
+			Si conFil<10 Entonces
+				linea=linea+' ';
+			FinSi
+			linea=linea+' = '+convertirAtexto(conFil*conTab);
+			Si conFil*conTab<100 Entonces
+				linea=linea+' ';
+			FinSi
+			Si conFil*conTab<10 Entonces
+				linea=linea+' ';
+			FinSi
+			linea=linea+'   ';
+		FinPara
+		Si conFil=1 Entonces
+			Escribir enc;
+			Escribir '';
+		FinSi
+		Escribir linea;
+		linea='';
+	FinPara
+FinProceso
+

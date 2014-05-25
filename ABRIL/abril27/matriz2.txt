@@ -1,0 +1,32 @@
+Proceso matriz2
+	Definir a,dim,i,j,b Como Entero;
+	Escribir "Ingrese dimensión";
+	Leer dim;
+	Dimension a[dim,dim],b[dim,dim];
+	Para i=0 hasta dim-1 Hacer
+		Para j=0 hasta dim-1 Hacer
+			a[i,j]=dim*i+j+1;
+		FinPara
+	FinPara
+	Para i=0 hasta dim-1 Hacer
+		Para j=0 hasta dim-1 Hacer
+			//b[i,j]=(dim*dim+1)-(dim*i+j+1);
+			b[i,j]=dim*(dim-i)-j;
+		FinPara
+	FinPara
+	presentarMatriz(a,dim);	
+	Escribir "";
+	presentarMatriz(b,dim);	
+FinProceso
+SubProceso presentarMatriz(a,dim)
+	Definir x,y Como Entero;
+	Definir l como Texto;
+	l="";
+	Para x=0 hasta  dim-1 Hacer
+		Para y=0 hasta dim-1 Hacer
+			l=l+convertirATexto(a[x,y])+"   ";
+		FinPara
+		Escribir l;
+		l="";
+	FinPara
+FinSubProceso

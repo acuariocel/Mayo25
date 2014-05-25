@@ -1,0 +1,24 @@
+Proceso matriz1
+	Definir a,dim,i,j Como Entero;
+	Escribir "Ingrese dimensión";
+	Leer dim;
+	Dimension a[dim,dim];
+	Para i=0 hasta dim-1 Hacer
+		Para j=0 hasta dim-1 Hacer
+			a[i,j]=1;
+		FinPara
+	FinPara
+	presentarMatriz(a,dim);
+FinProceso
+SubProceso presentarMatriz(a,dim)
+	Definir x,y Como Entero;
+	Definir l como Texto;
+	l="";
+	Para x=0 hasta  dim-1 Hacer
+		Para y=0 hasta dim-1 Hacer
+			l=l+convertirATexto(a[x,y])+"   ";
+		FinPara
+		Escribir l;
+		l="";
+	FinPara
+FinSubProceso

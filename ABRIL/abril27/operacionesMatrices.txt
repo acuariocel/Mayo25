@@ -1,0 +1,121 @@
+Proceso operacionesMatrices
+	Definir a,i,j,fil,col,c,b,x,y Como real;
+	Escribir "Ingrse número de filas";
+	Leer fil;
+	col=fil;
+	Dimension a[fil,col],b[fil,col],c[fil,col],x[fil,col],y[fil,col];
+	Para i=0 hasta  fil-1 Hacer
+		Para j=0 hasta col-1 Hacer			
+//			a[i,j]=100+azar(900);
+			//			b[i,j]=100+azar(900);
+			Escribir "valor matriz A[",i,",",j,"]: ";
+			leer a[i,j];
+			Escribir "valor matriz B[",i,",",j,"]: ";
+			leer b[i,j];
+		FinPara
+	FinPara
+	Escribir "Matriz A de ",fil," * ",col;
+	presentarMatriz(a,fil,col);
+	Escribir "Diagonal  principal de a es ",presentaDiagonalPri(a,fil,col);
+	Escribir "Diagonal secundaria de a es ",presentaDiagonalSec(a,fil,col);
+	Escribir "•••••••••••••••••••••••••••••••••••••••••••••";
+	Escribir "Matriz B de ",fil," * ",col;
+	presentarMatriz(b,fil,col);
+	Escribir "Diagonal  principal de b es ",presentaDiagonalPri(b,fil,col);
+	Escribir "Diagonal secundaria de b es ",presentaDiagonalSec(b,fil,col);
+	Escribir "•••••••••••••••••••••••••••••••••••••••••••••";
+	Escribir "A/2+B/3";
+	matrizEscalar(c,a,1.0/2,fil,col);
+	matrizEscalar(x,b,1/3.0,fil,col);
+	sumaPresentaMatrices(x,c,fil,col);
+	Escribir "•••••••••••••••••••••••••••••••••••••••••••••";
+	escribir "(3A+5B)7";
+	matrizEscalar(c,a,21,fil,col);
+	matrizEscalar(x,b,35,fil,col);
+	sumaPresentaMatrices(x,c,fil,col);
+FinProceso
+SubProceso presentarMatriz(a,fil,col)
+	Definir x,y Como Real;
+	Definir l como Texto;
+	l="";
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			l=l+convertirATexto(a[x,y])+"   ";
+		FinPara
+		Escribir l;
+		l="";
+	FinPara
+	Escribir "•••••••••••••••••••••••••••••••••••••••••••••";
+FinSubProceso
+SubProceso l=presentaDiagonalSec(a,fil,col)
+	Definir x,y Como Real;
+	Definir l como texto;
+	l="";
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			si x+y=fil-1 entonces
+				l=l+convertirATexto(a[x,y])+"   ";
+			FinSi
+		FinPara
+	FinPara
+FinSubProceso
+SubProceso l=presentaDiagonalPri(a,fil,col)
+	Definir x,y Como Real;
+	Definir l como texto;
+	l="";
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			si x=y entonces
+				l=l+convertirATexto(a[x,y])+"   ";
+			FinSi
+		FinPara
+	FinPara
+FinSubProceso
+SubProceso sumaMatrices(a,b,c,fil,col)
+	Definir x,y como Real;
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			c[x,y]=a[x,y]+b[x,y];
+		FinPara
+	FinPara
+FinSubProceso
+SubProceso sumaPresentaMatrices(a,b,fil,col)
+	Definir x,y,c como Real;
+	Dimension c[fil,col];
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			c[x,y]=a[x,y]+b[x,y];
+		FinPara
+	FinPara
+	presentarMatriz(c,fil,col);
+FinSubProceso
+SubProceso matrizNum(a,n,fil,col)
+	Definir x,y,c como Real;
+	Dimension c[fil,col];
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			c[x,y]=a[x,y]*n;
+		FinPara
+	FinPara
+	presentarMatriz(c,fil,col);
+FinSubProceso
+SubProceso matrizEscalar(c,a,n,fil,col)
+	Definir x,y como Real;
+	Para x=0 hasta  fil-1 Hacer
+		Para y=0 hasta col-1 Hacer
+			c[x,y]=a[x,y]*n;
+		FinPara
+	FinPara
+FinSubProceso
+
+
+
+
+
+
+
+
+
+
+
+

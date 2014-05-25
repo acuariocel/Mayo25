@@ -1,0 +1,40 @@
+Proceso serie3
+	Definir n,c,x Como Entero;
+	Definir l,l1 como cadena;
+	Escribir "Ingrese cantidad de numeros";
+	Leer n;
+	escribir "+-------------+";
+	Escribir "| DES  | ASC  |";
+	Escribir "+------+------+";
+	Para c=1 hasta n hacer
+		si c<10 entonces
+			l="000"+convertiratexto(c);
+		Sino
+			si c<100 entonces
+				l="00"+convertiratexto(c);
+			Sino
+				si c<1000 entonces
+					l="0"+convertiratexto(c);
+				Sino
+					l=convertiratexto(c);
+				FinSi
+			FinSi	
+		FinSi
+		x=n+1-c;
+		si x<10 entonces
+			l1="000"+convertiratexto(x);
+		Sino
+			si x<100 entonces
+				l1="00"+convertiratexto(x);
+			Sino
+				si x<1000 entonces
+					l1="0"+convertiratexto(x);
+				Sino
+					l1=convertiratexto(x);
+				FinSi
+			FinSi	
+		FinSi
+		Escribir "| ",l," | ",l1," |";
+	FinPara	
+	Escribir "+-------------+";
+FinProceso
