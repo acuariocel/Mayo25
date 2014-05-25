@@ -3,6 +3,7 @@
 #include <conio.h>  ///para getch
 #include <stdio.h>  ///para printf,scanf
 #include <math.h> ///para pow
+#include "Funciones.cpp"
 using namespace std;
 
 //PROCEDIMIENTO VERIFICAR
@@ -13,16 +14,6 @@ void verificaPar(int n) {
         printf("im");
     }
     cout << "par.";
-}
-
-//FUNCION CALCULAR POTENCIA
-
-int potencia(int base, int exp) {
-    int pot = 1;
-    for (int i = 0; i < exp; i++) {
-        pot = pot*base;
-    }
-    return pot;
 }
 
 int main() {
