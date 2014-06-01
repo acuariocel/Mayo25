@@ -10,10 +10,10 @@ int main() {
     system("title PROGRAMA CON FUNCIONES Y PROCEDIMIENTOS");
     system("color D");
     int n, e;
-    printf("Ingrese numero en binario: ");
+    printf("Ingrese numero: ");
     scanf("%d", &n);
-    int dec = convierteADecimal(n);
-    cout << "En decimal es: " << dec;
+    bool res = esprimo(n);
+    cout << "Es primo: " << res;
     getch();
     return 0;
 }
