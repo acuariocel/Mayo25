@@ -1,5 +1,6 @@
 #include <iostream> /// para cout,cin
 #include <stdio.h>  ///para printf,scanf
+#include <conio.h>
 using namespace std;
 //FUNCION CALCULAR POTENCIA
 
@@ -25,7 +26,7 @@ bool verificaPrimo(int p){
 
 //Funcion q retorna entero decimal, recibiendo como parametro un entero binario
 int convierteADecimal(long binario){
-	long binario,decimal;
+	int decimal;
 	int digito,i;
 	decimal=0;
 	i=1;
@@ -43,12 +44,9 @@ int convierteADecimal(long binario){
 			binario=0;
 		}
 	}
-	return decimal
+	return decimal;
 }
-//funcion de numeros primos
-#include <stdio.h>
-#include <conio.h>
-
+/*
 void main ()
 {
 int i,j,fl=0;
@@ -75,3 +73,4 @@ fl=0;
 
 getche ();
 } 
+*/
