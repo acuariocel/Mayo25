@@ -23,8 +23,25 @@ bool verificaPrimo(int p){
     return false;
 }
 
-//Funcion q retorne entero decimal, reibiento como parametro un entero binario
-int convierteADecimal(int bin){
-    int dec=0;
-    return dec;
+//Funcion q retorna entero decimal, recibiendo como parametro un entero binario
+int convierteADecimal(long binario){
+	long binario,decimal;
+	int digito,i;
+	decimal=0;
+	i=1;
+	while(binario!=0){
+		//toma el digito del numero binario
+		digito=binario%10;
+		//comprueba si el digito es 1 o 0 para saber si es binario.
+		if(digito==0 | digito==1){
+			decimal=decimal+(digito*i);
+			binario=binario/10;
+			i=i*2;
+		}
+		else{
+			cout<<"EL NUMERO NO ES BINARIO";
+			binario=0;
+		}
+	}
+	return decimal
 }
