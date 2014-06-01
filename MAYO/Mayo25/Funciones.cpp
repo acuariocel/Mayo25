@@ -45,3 +45,33 @@ int convierteADecimal(long binario){
 	}
 	return decimal
 }
+//funcion de numeros primos
+#include <stdio.h>
+#include <conio.h>
+
+void main ()
+{
+int i,j,fl=0;
+
+printf ("**NUMEROS PRIMOS** \n\n\n");
+
+printf("1 - 2 - 3 ");
+
+for (i=4;i<101;i++)
+{
+for (j=2;j<i;j++)
+{
+
+if (i%j==0)
+fl=1;
+}
+
+if (fl==0)
+printf("- %i",i);
+else
+fl=0;
+
+}
+
+getche ();
+} 
