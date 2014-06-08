@@ -1,0 +1,5 @@
+sudo apt-get install g++
+sudo apt-get install gcc
+
+g++ --version
+gcc --version

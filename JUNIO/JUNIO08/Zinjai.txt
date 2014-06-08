@@ -1,0 +1,3 @@
+tar -xzvf zinjai-l64-20140411.tgz
+cd zinjai
+./zinjai

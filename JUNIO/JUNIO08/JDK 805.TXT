@@ -1,5 +1,3 @@
-Como instalar JDK 8.0.5 en Linux
-
 tar -xvf jdk-8u5-linux-x64.gz
 sudo mkdir -p /usr/lib/jvm/jdk1.8.0
 sudo mv jdk1.8.0_05/* /usr/lib/jvm/jdk1.8.0/
